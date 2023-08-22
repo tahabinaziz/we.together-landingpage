@@ -1,7 +1,5 @@
 module.exports = {
   content: [
-      "./pages/**/*.{js,ts,jsx,tsx}",
-      "./components/**/*.{js,ts,jsx,tsx}",
       './src/**/*.{js,jsx,ts,tsx}', './public/index.html'
   ],
 
@@ -41,9 +39,10 @@ module.exports = {
               '8xl': '1400px',
           },
           colors: {
-              'primary': '#ff5951',
+              'primary': '#A64D79',
               'secondary': '#e0e8ea',
-              'background': '#f2f2f2',
+              'background': '#F8F9FA',
+              'gray':'#495057'
               
           },
           screens: {
@@ -68,7 +67,7 @@ module.exports = {
             
       },
   },
-  plugins: [
-    require('@tailwindcss/aspect-ratio'),
-  ],
+  // plugins: [
+  //   require('@tailwindcss/aspect-ratio'),
+  // ],
 }
