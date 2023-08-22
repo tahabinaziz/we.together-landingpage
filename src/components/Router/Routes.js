@@ -1,4 +1,11 @@
 export const AppRoute = {
     HomePage:"/",
-    UberUns:"/Uber uns"
+    UberUns:"/Über-uns",
+    Gruppen:"/Gruppen",
+    Blog:"/Blog",
+    Startseite:"/Startseite",
+    Preisübersicht:"/Preisübersicht",
+    Mitgliedwerden:"/Mitgliedwerden",
+    Anmelden:"/Anmelden"
+
 }
