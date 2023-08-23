@@ -8,7 +8,7 @@ export default function Button(props) {
         onClick={() => {
           navigate(props.url);
         }}
-        className="bg-primary text-white hover:bg-black px-4 py-2 rounded-md"
+        className={`bg-primary text-white px-4 py-2 rounded-md ${props.className}`}
       >
         {props.text}
       </button>
