@@ -91,7 +91,7 @@ const HomePage = () => {
           <h3 className="text-3xl md:text-4xl lg:text-6xl ">
             Online Selbsthilfegruppen
           </h3>
-          <p class="font-sans text-base ">
+          <p className="font-sans text-base ">
             Tausche Dich mit anderen Betroffenen aus oder starte eine neue
             Gruppe. Unabhängig von deinem Wohnort und passend zu deiner
             Lebenssituation.
@@ -139,7 +139,7 @@ const HomePage = () => {
         <h3 className="mt-4 text-xl text-left font-semibold md:text-2xl ">
           Deine Vorteile mit we.together
         </h3>
-        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
           <div className="flex">
             <Vorteile
               number={"01"}

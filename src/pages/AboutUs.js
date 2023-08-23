@@ -17,7 +17,7 @@ const UberUns = () => {
             Wir demokratisieren Selbsthilfegruppen
           </h3>
           <div className="text-justify justify-center flex">
-            <p class="font-sans text-base font-normal p-4 text-center item-center md:w-5/6 lg:w-1/2  ">
+            <p className="font-sans text-base font-normal p-4 text-center item-center md:w-5/6 lg:w-1/2  ">
               Gemeinsam haben wir es uns zur Aufgabe gemacht Menschen in
               schwierigen Lebenssituationen zu unterstützen und haben damit auch
               eine Lebensaufgabe gewählt.
