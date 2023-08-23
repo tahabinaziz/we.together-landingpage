@@ -8,6 +8,7 @@ import Startseite from "../../pages/Statistics";
 import Blog from "../../pages/Blog";
 import Anmelden from "../../pages/Register";
 import Mitgliedwerden from "../../pages/Member";
+import Page404 from "../../pages/Page404";
 
 const routing = [
   {
@@ -42,6 +43,11 @@ const routing = [
     appRoute: AppRoute.Mitgliedwerden,
     component: Mitgliedwerden,
   },
+  {
+    appRoute: AppRoute.Page404,
+    component: Page404
+}
+
 
 ];
 
@@ -51,6 +57,7 @@ const AppRouter = () => {
       {/* <Route path={"/"} element={<HomePage />}></Route>
       <Route path={"/Uber uns"} element={<UberUns />}></Route> */}
       <Route>
+      <Route path="*" element={<Page404 />} ></Route>
         {routing.map((url, index) => {
           return (
             <Route

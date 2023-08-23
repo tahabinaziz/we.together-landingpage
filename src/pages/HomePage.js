@@ -86,12 +86,12 @@ const HomePage = () => {
 
   return (
     <>
-      <div class="bg-background grid grid-cols-1 md:grid-cols-2 gap-4 p-8">
-        <div class="bg-gray-200  flex flex-col justify-center items-center p-4 gap-8">
-          <h3 class="text-3xl md:text-4xl lg:text-6xl ">
+      <div className="bg-background grid grid-cols-1 md:grid-cols-2 gap-4 p-8">
+        <div className="bg-gray-200  flex flex-col justify-center items-center p-4 gap-8">
+          <h3 className="text-3xl md:text-4xl lg:text-6xl ">
             Online Selbsthilfegruppen
           </h3>
-          <p class="font-sans text-base ">
+          <p className="font-sans text-base ">
             Tausche Dich mit anderen Betroffenen aus oder starte eine neue
             Gruppe. Unabhängig von deinem Wohnort und passend zu deiner
             Lebenssituation.
@@ -103,15 +103,16 @@ const HomePage = () => {
           />
         </div>
 
-        <div class="bg-gray-300 p-4">
-          <div class="grid grid-cols-2 gap-4">
-            <div class="space-y-3">
-              <div class="h-6 md:h-20 spacing-y-2 bg-primary rounded"></div>
+        <div className="bg-gray-300 p-4">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-3">
+              <div className="h-6 md:h-20 spacing-y-2 bg-secondary rounded"></div>
               <img src={image1} alt="image1.png" />
               <img src={image2} alt="image2.png" />
             </div>
-            <div>
+            <div className="space-y-3">
               <img src={image3} alt="image3.png" />
+              <div className="h-8 md:h-20 spacing-y-2 bg-extraSecondary rounded"></div>
             </div>
           </div>
         </div>
@@ -138,7 +139,7 @@ const HomePage = () => {
         <h3 className="mt-4 text-xl text-left font-semibold md:text-2xl ">
           Deine Vorteile mit we.together
         </h3>
-        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
           <div className="flex">
             <Vorteile
               number={"01"}
@@ -198,33 +199,35 @@ const HomePage = () => {
 
       {/* Funktioniert */}
 
-      <div className="container mx-auto md:p-8">
-       
+      <div className="container mx-auto md:p-8 lg:-mt-8">
         <h3 className="text-xl text-left text-xl font-semibold md:text-2xl mb-8">
           So funktioniert we.together
         </h3>
 
-          {/* Image on the left */}
-          <TwoColumn
-            image={image5}
-            heading="Finde deine Gruppe"
-            paragraph="Finde aus zahlreichen Gruppen, die passende(n) für Dich und tausche Dich online, in regelmäßigen Terminen, mit anderen Betroffene aus, die in der gleichen Situation sind wie Du."
-            buttonText="Gruppe finden"
-            imageOnLeft={true}
-            showButton={true}
-          />
+        {/* Image on the left */}
+        <TwoColumn
+          image={image5}
+          heading="Finde deine Gruppe"
+          paragraph="Finde aus zahlreichen Gruppen, die passende(n) für Dich und tausche Dich online, in regelmäßigen Terminen, mit anderen Betroffene aus, die in der gleichen Situation sind wie Du."
+          buttonText="Gruppe finden"
+          imageOnLeft={true}
+          showButton={true}
+          imageHeight={'h-72'}
+          imageWidth={'w-80'}
+        />
 
-          {/* Image on the right */}
-          <TwoColumn
-            image={image6}
-            heading="Starte neue Gruppen"
-            paragraph="Zu jedem beliebigen Thema hast du die Möglichkeit eine Gruppe zu eröffnen und Menschen zusammenzubringen. Erstelle mit unserer Hilfe in nur vier Schritten deine Selbsthilfegruppe. We.together ist für Gruppen ModeratorInnen komplett kostenlos."
-            buttonText="Gruppe starten"
-            imageOnLeft={false}
-            showButton={true}
-          />
+        {/* Image on the right */}
+        <TwoColumn
+          image={image6}
+          heading="Starte neue Gruppen"
+          paragraph="Zu jedem beliebigen Thema hast du die Möglichkeit eine Gruppe zu eröffnen und Menschen zusammenzubringen. Erstelle mit unserer Hilfe in nur vier Schritten deine Selbsthilfegruppe. We.together ist für Gruppen ModeratorInnen komplett kostenlos."
+          buttonText="Gruppe starten"
+          imageOnLeft={false}
+          showButton={true}
+          imageHeight={'h-72'}
+          imageWidth={'w-80'}
+        />
       </div>
-      
 
       {/*Ein monatlicher Preis*/}
       <div className="bg-monatlicher text-center p-4 flex flex-col justify-center items-center mb-2 gap-6">
@@ -287,7 +290,7 @@ const HomePage = () => {
       </div>
 
       {/* Gemeinsam */}
-      <div className="container mx-auto  md:p-8">
+      <div className="container mx-auto  md:p-8 -mt-8">
         <h3 className="text-left  text-xl text-textColor font-semibold md:text-2xl p-4">
           Gemeinsam Selbsthilfe ermöglichen
         </h3>

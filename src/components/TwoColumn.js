@@ -7,17 +7,19 @@ const TwoColumn = ({
   buttonText,
   imageOnLeft,
   showButton,
+  imageHeight,
+  imageWidth
 }) => {
   const columnOrder = imageOnLeft ? "md:flex-row" : "md:flex-row-reverse";
   return (
     <>
-      <div className={`flex flex-col ${columnOrder} bg-gray-100 gap-4`}>
+      <div className={`flex flex-col ${columnOrder} bg-gray-100 gap-4 mt-8`}>
         {/* Left Column (Image) */}
         <div className="md:w-1/2 ">
           <img
             src={image}
             alt="Your Image"
-            className="w-full h-auto rounded-md"
+            className={`${imageHeight} ${imageWidth} w-full h-auto rounded-md`}
           />
         </div>
 
