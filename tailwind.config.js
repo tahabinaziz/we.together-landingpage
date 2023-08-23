@@ -4,8 +4,13 @@ module.exports = {
   ],
 
   mode: 'jit',
-  theme: {
-      extend: {
+  theme: {  
+    extend: {
+
+        fontFamily: {
+            'sans': ['Helvetica', 'Arial', 'sans-serif'],
+        },
+
           backgroundImage: {
               // "aktuell": "url('/static/home/images/gtsol-bg-aktuell.webp')",
               // "gradient-bg": "url('/static/images/gradient-bg.webp')",
@@ -40,9 +45,10 @@ module.exports = {
           },
           colors: {
               'primary': '#A64D79',
-              'secondary': '#e0e8ea',
+              'secondary': '#ACD7EB',
               'background': '#F8F9FA',
-              'gray':'#495057'
+              'gray':'#495057',
+              'vorteile':'#212529'
               
           },
           screens: {

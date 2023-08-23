@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import Button from "./Button";
 
@@ -11,8 +11,8 @@ const Header = () => {
   };
 
   return (
-    <nav>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-background">
+      <div className=" px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* <!-- Left side: Links (Hidden on mobile) --> */}
           <div className="hidden md:flex items-center p-4">
@@ -37,14 +37,17 @@ const Header = () => {
 
           {/* <!-- Center: Logo --> */}
           <div className="flex justify-center">
-           <a href="https://www.hellowetogether.de" target="_blank"> <img src={logo} alt="logo" /></a> 
+            <a href="https://www.hellowetogether.de" target="_blank">
+              {" "}
+              <img src={logo} alt="logo" />
+            </a>
           </div>
 
           {/* <!-- Right side: Button (Hidden on mobile) --> */}
           <div className="hidden md:flex items-center space-x-4">
             <input
               type="search"
-              className="bg-purple-white shadow rounded border-0 p-2 outline-primary"
+              className="bg-purple-white shadow rounded border-0 p-2 outline-primary md:w-14 lg:w-44"
               placeholder="Gruppe suchen"
             />
             <Link to="/Anmelden">
@@ -218,8 +221,8 @@ const Header = () => {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
-                    stroke="text-primary"
-                    class="w-6 h-6 text-primary "
+                    stroke="currentColor"
+                    class="w-6 h-6 text-primary"
                   >
                     <path
                       stroke-linecap="round"
@@ -227,6 +230,7 @@ const Header = () => {
                       d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
                     />
                   </svg>
+
                   <span className="group-hover:text-primary">Anmelden</span>
                 </div>
               </Link>
