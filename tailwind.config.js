@@ -51,6 +51,7 @@ module.exports = {
               'gray':'#495057',
               'textColor':'#212529',
               'lineColor':"#495057",
+              'gemeinsam':'#8590A6'
 
               
           },
