@@ -9,6 +9,7 @@ module.exports = {
 
         fontFamily: {
             'sans': ['Helvetica', 'Arial', 'sans-serif'],
+            'noto':['Noto Sans SC']
         },
 
           backgroundImage: {
@@ -48,7 +49,9 @@ module.exports = {
               'secondary': '#ACD7EB',
               'background': '#F8F9FA',
               'gray':'#495057',
-              'vorteile':'#212529'
+              'textColor':'#212529',
+              'lineColor':"#495057",
+
               
           },
           screens: {

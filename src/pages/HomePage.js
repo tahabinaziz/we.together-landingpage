@@ -2,7 +2,11 @@ import image1 from "../assets/images/image1.png";
 import image2 from "../assets/images/image2.png";
 import image3 from "../assets/images/image3.png";
 import image4 from "../assets/images/image4.png";
+import image5 from "../assets/images/image5.png";
+import image6 from "../assets/images/image6.png";
 import Button from "../components/Button";
+import Footer from "../components/Footer";
+import TwoColumn from "../components/TwoColumn";
 import Vorteile from "../components/Vorteile";
 const HomePage = () => {
   return (
@@ -17,7 +21,11 @@ const HomePage = () => {
             Gruppe. Unabhängig von deinem Wohnort und passend zu deiner
             Lebenssituation.
           </p>
-          <Button url={"/"} text={"Jetzt starten"} />
+          <Button
+            url={"/"}
+            text={"Jetzt starten"}
+            className={"hover:bg-secondary"}
+          />
         </div>
 
         <div class="bg-gray-300 p-4">
@@ -35,22 +43,23 @@ const HomePage = () => {
       </div>
 
       <div className="mt-4 px-8 sm:px-6 lg:px-8 mb-2">
-        <h3 className="space-y-3 text-medium font-semibold md:text-2xl ">Gefördert durch</h3>
+        <h3 className="p-4 space-y-3 text-medium font-semibold md:text-2xl ">
+          Gefördert durch
+        </h3>
         <img src={image4} alt="fundedby.png" />
       </div>
 
       <div className="bg-secondary h-48 flex flex-col justify-center items-center mb-2">
         <div className="text-lg w-72 md:w-96 font-medium flex text-justify">
-          {/* <div className=""> */}
-            <p className="text-white font-base text-center">
-              In der von Adrian gegründeten Gruppe, spricht Torsten über seine
-              Panikattacken und Merve fühlt sich endlich verstanden.
-            </p>
-          {/* </div> */}
+          <p className="text-white font-base text-center">
+            In der von Adrian gegründeten Gruppe, spricht Torsten über seine
+            Panikattacken und Merve fühlt sich endlich verstanden.
+          </p>
         </div>
       </div>
 
-      <div className="mt-4 px-8 sm:px-6 lg:px-8 mb-2 gap-4">
+      {/* Vorteile */}
+      <div className=" mt-8 px-8 sm:px-6 lg:px-8 py-8 mb-2 gap-4 mt-8">
         <h3 className="space-y-3 text-medium font-semibold md:text-2xl ">
           Deine Vorteile mit we.together
         </h3>
@@ -112,6 +121,42 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+
+      {/* Funktioniert */}
+
+      <div className="mt-4 px-8 sm:px-6 lg:px-8 mb-2 gap-4">
+        <h3 className="p-4 space-y-3 text-medium font-semibold md:text-2xl ">
+          So funktioniert we.together
+        </h3>
+
+        <div>
+          {/* Image on the left */}
+          <TwoColumn
+            image={image5}
+            heading="Finde deine Gruppe"
+            paragraph="Finde aus zahlreichen Gruppen, die passende(n) für Dich und tausche Dich online, in regelmäßigen Terminen, mit anderen Betroffene aus, die in der gleichen Situation sind wie Du."
+            buttonText="Gruppe finden"
+            imageOnLeft={true}
+            showButton={true}
+          />
+
+          {/* Image on the right */}
+          <TwoColumn
+            image={image6}
+            heading="Starte neue Gruppen"
+            paragraph="Zu jedem beliebigen Thema hast du die Möglichkeit eine Gruppe zu eröffnen und Menschen zusammenzubringen. Erstelle mit unserer Hilfe in nur vier Schritten deine Selbsthilfegruppe. We.together ist für Gruppen ModeratorInnen komplett kostenlos."
+            buttonText="Gruppe starten"
+            imageOnLeft={false}
+            showButton={true}
+          />
+        </div>
+      </div>
+
+      {/* Footer */}
+              <Footer/>
+
+
+
     </>
   );
 };

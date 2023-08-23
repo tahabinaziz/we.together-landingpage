@@ -37,10 +37,9 @@ const Header = () => {
 
           {/* <!-- Center: Logo --> */}
           <div className="flex justify-center">
-            <a href="https://www.hellowetogether.de" target="_blank">
-              {" "}
+            <Link to="/">
               <img src={logo} alt="logo" />
-            </a>
+            </Link>
           </div>
 
           {/* <!-- Right side: Button (Hidden on mobile) --> */}
@@ -53,7 +52,11 @@ const Header = () => {
             <Link to="/Anmelden">
               <div className="text-gray hover:text-primary p-2">Anmelden</div>
             </Link>
-            <Button url={"/Mitgliedwerden"} text="Mitglied werden" />
+            <Button
+              url={"/Mitgliedwerden"}
+              text={"Mitglied werden"}
+              className={"hover:bg-secondary"}
+            />
           </div>
 
           {/* <!-- Mobile menu button (Hidden on desktop) --> */}
@@ -230,14 +233,17 @@ const Header = () => {
                       d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
                     />
                   </svg>
-
                   <span className="group-hover:text-primary">Anmelden</span>
                 </div>
               </Link>
             </li>
             <li>
               <div className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray">
-                <Button url={"/Mitgliedwerden"} text="Mitglied werden" />
+                <Button
+                  url={"/Mitgliedwerden"}
+                  text={"Mitglied werden"}
+                  className={"hover:bg-secondary"}
+                />
               </div>
             </li>
           </ul>
