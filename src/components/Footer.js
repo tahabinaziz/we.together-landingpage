@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
       <div className=" md:w-1/2 md:my-auto  md:border-l pl-4 md:pl-8"></div>
 
-      <div className="container mt-20  mx-auto flex flex-col md:flex-row py-6 px-4 border-t-2 border-lineColor">
+      <div className="container   mx-auto flex flex-col md:flex-row py-6 px-4 border-t-2 border-lineColor">
         {/* Left Column (Logo) */}
 
         <div className="mt-8 ml-4 md:w-1/12 md:flex md:justify-center md:items-center mb-4 md:mb-0 ml-12">

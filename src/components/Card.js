@@ -11,7 +11,7 @@ const Card = ({
   imageHeight,
 }) => {
   return (
-    <div className=" rounded-lg p-6">
+    <div className=" rounded-lg p-4">
       <img
         src={imageUrl}
         alt={title}
@@ -41,7 +41,7 @@ const Card = ({
       )}
       {showHeadingAndParagraph && (
         <>
-          <h2 className="text-xl font-semibold mb-2 text-textColor">
+          <h2 className="text-xl font-semibold mb-2 text-textColor md:text-2xl">
             {heading}
           </h2>
           <p className="text-gemeinsam">{paragraph}</p>

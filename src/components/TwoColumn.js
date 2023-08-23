@@ -13,7 +13,7 @@ const TwoColumn = ({
     <>
       <div className={`flex flex-col ${columnOrder} bg-gray-100 gap-4`}>
         {/* Left Column (Image) */}
-        <div className="md:w-1/2 p-4 ">
+        <div className="md:w-1/2 ">
           <img
             src={image}
             alt="Your Image"
@@ -23,7 +23,7 @@ const TwoColumn = ({
 
         {/* Right Column (Text Content) */}
         <div className="md:w-1/2 p-4 flex flex-col justify-center">
-          <h2 className="text-2xl font-bold mb-2 text-left font-sans text-textColor">
+          <h2 className="text-xl font-bold mb-2 text-left font-sans text-textColor md:text-2xl">
             {heading}
           </h2>
           <p className="text-gray-600 mb-4 text-left text-textColor font-sans">
