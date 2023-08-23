@@ -9,12 +9,12 @@ const Footer = () => {
       <div className="container   mx-auto flex flex-col md:flex-row py-6 px-4 border-t-2 border-lineColor">
         {/* Left Column (Logo) */}
 
-        <div className="mt-8 ml-4 md:w-1/12 md:flex md:justify-center md:items-center mb-4 md:mb-0 ml-12">
+        <div className="mt-8 ml-4 md:w-1/12 md:flex md:justify-center md:items-center mb-4 md:mb-0 ml-16">
           <img src={logo} alt="Logo" className="w-32 h-auto" />
         </div>
         {/* Right Column (Links) */}
         <div className="mt-8 ml-8 md:w-5/6 md:flex md:flex-col justify-center items-center md:justify-center md:items-start mr-20 lg:mr-32">
-          <ul className="md:ml-auto space-y-4 text-center">
+          <ul className="md:ml-auto space-y-4 text-center ml-8 md:ml-0">
             <h3 className="text-2xl font-sans text-headingColor">
               Rechtliches
             </h3>

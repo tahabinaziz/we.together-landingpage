@@ -106,7 +106,7 @@ const HomePage = () => {
         <div className="bg-gray-300 p-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-3">
-              <div class="h-6 md:h-20 spacing-y-2 bg-secondary rounded"></div>
+              <div className="h-6 md:h-20 spacing-y-2 bg-secondary rounded"></div>
               <img src={image1} alt="image1.png" />
               <img src={image2} alt="image2.png" />
             </div>
@@ -199,7 +199,7 @@ const HomePage = () => {
 
       {/* Funktioniert */}
 
-      <div className="container mx-auto md:p-8 -mt-8">
+      <div className="container mx-auto md:p-8 lg:-mt-8">
         <h3 className="text-xl text-left text-xl font-semibold md:text-2xl mb-8">
           So funktioniert we.together
         </h3>
@@ -212,6 +212,8 @@ const HomePage = () => {
           buttonText="Gruppe finden"
           imageOnLeft={true}
           showButton={true}
+          imageHeight={'h-72'}
+          imageWidth={'w-80'}
         />
 
         {/* Image on the right */}
@@ -222,6 +224,8 @@ const HomePage = () => {
           buttonText="Gruppe starten"
           imageOnLeft={false}
           showButton={true}
+          imageHeight={'h-72'}
+          imageWidth={'w-80'}
         />
       </div>
 

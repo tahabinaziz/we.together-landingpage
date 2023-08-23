@@ -6,6 +6,7 @@ export const AppRoute = {
     Startseite:"/Startseite",
     Preisübersicht:"/Preisübersicht",
     Mitgliedwerden:"/Mitgliedwerden",
-    Anmelden:"/Anmelden"
+    Anmelden:"/Anmelden",
+    Page404:"/Page404"
 
 }
