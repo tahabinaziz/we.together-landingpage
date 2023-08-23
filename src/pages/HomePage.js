@@ -4,11 +4,85 @@ import image3 from "../assets/images/image3.png";
 import image4 from "../assets/images/image4.png";
 import image5 from "../assets/images/image5.png";
 import image6 from "../assets/images/image6.png";
+import image7 from "../assets/images/image7.png";
+import image8 from "../assets/images/image8.png";
+import image9 from "../assets/images/image9.png";
+import image10 from "../assets/images/image10.png";
+import image11 from "../assets/images/image11.png";
+import image12 from "../assets/images/image12.png";
+import image13 from "../assets/images/image13.png";
 import Button from "../components/Button";
+import Card from "../components/Card";
 import Footer from "../components/Footer";
 import TwoColumn from "../components/TwoColumn";
 import Vorteile from "../components/Vorteile";
 const HomePage = () => {
+    
+  const cardDataGemeinsam = [
+    {
+      imageUrl: image7,
+      title: "",
+      heading: "Unsere Vision",
+      paragraph:
+        "Wir wollen mit we.together Deutschlands führende digitale Selbsthilfe Plattform schaffen, die jedem den Zugang zu der richtigen Selbsthilfegruppe ermöglicht.",
+      imageWidth: "auto",
+      imageHeight: "80",
+    },
+    {
+      imageUrl: image8,
+      title: "",
+      heading: "Unsere Einstellung",
+      paragraph:
+        "Wir glauben daran, dass jeder Mensch glücklich sein darf und die Lösung, um das zu erreichen, in sich trägt. Wir bieten mit we.together eine Möglichkeit und einen Weg zu dieser Lösung zu kommen.",
+      imageWidth: "auto",
+      imageHeight: "80",
+    },
+    {
+      imageUrl: image9,
+      title: "",
+      heading: "Unser Team",
+      paragraph:
+        "We.together wird auch bei uns im Team groß geschrieben. Gemeinsam haben wir es uns zur Aufgabe gemacht Menschen in schwierigen Lebenssituationen zu unterstützen und haben damit auch eine Lebensaufgabe gewählt.",
+      imageWidth: "auto",
+      imageHeight: "80",
+    },
+  ];
+
+  const cardDataGruppe = [
+    {
+      imageUrl: image10,
+      title: "Depressionsgruppen",
+      heading: "",
+      paragraph: "",
+      imageWidth: "auto",
+      imageHeight: "80",
+    },
+    {
+      imageUrl: image11,
+      title: "Trauergruppen",
+      heading: "",
+      paragraph: "",
+      imageWidth: "auto",
+      imageHeight: "80",
+    },
+    {
+      imageUrl: image12,
+      title: "Gruppen für Angehörige",
+      heading: "",
+      paragraph: "",
+      imageWidth: "auto",
+      imageHeight: "80",
+    },
+    {
+      imageUrl: image13,
+      title: "Alle Gruppen anzeigen",
+      heading: "",
+      paragraph: "",
+      imageWidth: "auto",
+      imageHeight: "80",
+    },
+  ];
+
   return (
     <>
       <div class="bg-background grid grid-cols-1 md:grid-cols-2 gap-4 p-8">
@@ -43,7 +117,7 @@ const HomePage = () => {
       </div>
 
       <div className="mt-4 px-8 sm:px-6 lg:px-8 mb-2">
-        <h3 className="p-4 space-y-3 text-medium font-semibold md:text-2xl ">
+        <h3 className="p-4 space-y-3 text-medium font-semibold md:text-2xl">
           Gefördert durch
         </h3>
         <img src={image4} alt="fundedby.png" />
@@ -63,7 +137,6 @@ const HomePage = () => {
         <h3 className="space-y-3 text-medium font-semibold md:text-2xl ">
           Deine Vorteile mit we.together
         </h3>
-
         <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="flex">
             <Vorteile
@@ -152,11 +225,52 @@ const HomePage = () => {
         </div>
       </div>
 
+      {/* Gruppe */}
+      <div className="container mx-auto py-8">
+        <h3 className="p-4 space-y-3 text-medium text-textColor font-semibold md:text-2xl ">
+          Finde Die richtige Gruppe für Dich
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
+          {cardDataGruppe.map((card, index) => (
+            <Card
+              key={index}
+              imageUrl={card.imageUrl}
+              title={card.title}
+              heading={card.heading}
+              paragraph={card.paragraph}
+              showHeadingAndParagraph={false} // Set to true to show heading and paragraph
+              imageHeight={""}
+              imageWidth={""}
+              showTitle={true} // Set to true to show title
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Gemeinsam */}
+      <div className="container mx-auto py-8">
+        <h3 className="p-4 space-y-3 text-medium text-textColor font-semibold md:text-2xl ">
+          Gemeinsam Selbsthilfe ermöglichen
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+          {cardDataGemeinsam.map((card, index) => (
+            <Card
+              key={index}
+              imageUrl={card.imageUrl}
+              title={card.title}
+              heading={card.heading}
+              paragraph={card.paragraph}
+              showHeadingAndParagraph={true} // Set to true to show heading and paragraph
+              imageHeight={""}
+              imageWidth={""}
+              showTitle={false} // Set to false to hide title
+            />
+          ))}
+        </div>
+      </div>
+
       {/* Footer */}
-              <Footer/>
-
-
-
+      <Footer />
     </>
   );
 };
