@@ -51,7 +51,8 @@ module.exports = {
               'gray':'#495057',
               'textColor':'#212529',
               'lineColor':"#495057",
-              'gemeinsam':'#8590A6'
+              'gemeinsam':'#8590A6',
+              'monatlicher':'#F9F5E6'
 
               
           },

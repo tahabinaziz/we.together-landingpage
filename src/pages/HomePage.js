@@ -11,13 +11,14 @@ import image10 from "../assets/images/image10.png";
 import image11 from "../assets/images/image11.png";
 import image12 from "../assets/images/image12.png";
 import image13 from "../assets/images/image13.png";
+import image14 from "../assets/images/image14.png";
 import Button from "../components/Button";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
 import TwoColumn from "../components/TwoColumn";
 import Vorteile from "../components/Vorteile";
+import { Link } from "react-router-dom";
 const HomePage = () => {
-    
   const cardDataGemeinsam = [
     {
       imageUrl: image7,
@@ -117,13 +118,13 @@ const HomePage = () => {
       </div>
 
       <div className="mt-4 px-8 sm:px-6 lg:px-8 mb-2">
-        <h3 className="p-4 space-y-3 text-medium font-semibold md:text-2xl">
+        <h3 className="p-4 space-y-3 text-xl text-left font-semibold md:text-2xl">
           Gefördert durch
         </h3>
         <img src={image4} alt="fundedby.png" />
       </div>
 
-      <div className="bg-secondary h-48 flex flex-col justify-center items-center mb-2">
+      <div className="bg-secondary h-48 flex flex-col justify-center items-center">
         <div className="text-lg w-72 md:w-96 font-medium flex text-justify">
           <p className="text-white font-base text-center">
             In der von Adrian gegründeten Gruppe, spricht Torsten über seine
@@ -133,11 +134,11 @@ const HomePage = () => {
       </div>
 
       {/* Vorteile */}
-      <div className=" mt-8 px-8 sm:px-6 lg:px-8 py-8 mb-2 gap-4 mt-8">
-        <h3 className="space-y-3 text-medium font-semibold md:text-2xl ">
+      <div className="container mx-auto py-4 md:p-8">
+        <h3 className="mt-4 text-xl text-left font-semibold md:text-2xl ">
           Deine Vorteile mit we.together
         </h3>
-        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
           <div className="flex">
             <Vorteile
               number={"01"}
@@ -197,12 +198,12 @@ const HomePage = () => {
 
       {/* Funktioniert */}
 
-      <div className="mt-4 px-8 sm:px-6 lg:px-8 mb-2 gap-4">
-        <h3 className="p-4 space-y-3 text-medium font-semibold md:text-2xl ">
+      <div className="container mx-auto md:p-8">
+       
+        <h3 className="text-xl text-left text-xl font-semibold md:text-2xl mb-8">
           So funktioniert we.together
         </h3>
 
-        <div>
           {/* Image on the left */}
           <TwoColumn
             image={image5}
@@ -222,12 +223,50 @@ const HomePage = () => {
             imageOnLeft={false}
             showButton={true}
           />
+      </div>
+      
+
+      {/*Ein monatlicher Preis*/}
+      <div className="bg-monatlicher text-center p-4 flex flex-col justify-center items-center mb-2 gap-6">
+        <h3 className="mt-4  text-xl text-textColor font-semibold md:text-2xl ">
+          Ein monatlicher Preis - unlimitierter Zugang zu Gruppen
+        </h3>
+        <div className="-mt-2 text-lg w-5/6 font-medium flex text-justify md:w-2/4 ">
+          <p className="text-center">
+            Teste 5 Gruppen-Termine jetzt kostenlos, danach kannst Du für 19,95
+            € / Monat an unbegrenzt vielen Gruppen teilnehmen.
+          </p>
         </div>
+        <div className="flex bg-[#FCFCFC] text-lg w-full md:w-2/4 font-medium flex text-justify rounded lg:w-2/5">
+          <div className="flex grid-cols-2 mt-4 mb-4 p-2 gap-4 ml-3  md:ml-6 lg:ml-6">
+            <div className="col-span-1 flex justify-center items-center">
+              <div className="bg-monatlicher flex justify-center items-center w-20 h-20 rounded-full">
+                <img src={image14} alt="Logo" className="w-12 h-12" />
+              </div>
+            </div>
+            <div className="col-span-1 ">
+              <h3 className="mb-2 text-lg font-semibold font-sans text-textColor md:text-xl lg:text-2xl">
+                5 Teilnahmen kostenlos
+              </h3>
+              <p className="text-md text-left text-lg font-sans p-2 text-textColor md:text-base">
+                Danach 19,95 € / Monat. Jederzeit kündbar
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p>
+          We.together ist kostenlos für Gruppenmoderatoren -{" "}
+          <Link to={"/"}>
+            <span className="text-primary underline">Jetzt mehr erfahren.</span>
+          </Link>
+        </p>
+        <Button url={"/"} text={"Jetzt testen"} className={"mt-2 mb-6"} />
       </div>
 
       {/* Gruppe */}
-      <div className="container mx-auto py-8">
-        <h3 className="p-4 space-y-3 text-medium text-textColor font-semibold md:text-2xl ">
+      <div className="container mx-auto md:p-8">
+        <h3 className="text-left  space-y-3 text-xl text-textColor font-semibold md:text-2xl p-4">
           Finde Die richtige Gruppe für Dich
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
@@ -248,8 +287,8 @@ const HomePage = () => {
       </div>
 
       {/* Gemeinsam */}
-      <div className="container mx-auto py-8">
-        <h3 className="p-4 space-y-3 text-medium text-textColor font-semibold md:text-2xl ">
+      <div className="container mx-auto  md:p-8">
+        <h3 className="text-left  text-xl text-textColor font-semibold md:text-2xl p-4">
           Gemeinsam Selbsthilfe ermöglichen
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
